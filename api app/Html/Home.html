@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Music Website</title>
+	<link rel="stylesheet" type="text/css" href="../res/semantic@2.4.2.css">
+	<style>
+	  body {
+	    padding-top: 60px;
+	 }.ui.container {
+	    margin-top: 40px;
+	    margin-bottom: 40px;
+    }
+
+    .ui.segment {
+	    padding: 40px;
+    }
+
+    .ui.grid>.column {
+	    padding-right: 0;
+	    padding-left: 0;
+    }
+
+    .ui.cards>.card {
+	    margin-bottom: 40px;
+    }
+
+    .ui.inverted.menu .item {
+	    color: white;
+    }
+
+    .ui.inverted.menu .active.item {
+	    background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .ui.inverted.vertical.footer.segment {
+	    padding: 5em 0em;
+    }
+
+    .ui.inverted.vertical.footer.segment .ui.container {
+	    max-width: 1000px;
+    }
+
+    .ui.inverted.vertical.footer.segment .ui.stackable.inverted.divided.equal.height.stackable.grid {
+	    margin: 20px 0 0;
+    }
+
+    .ui.inverted.vertical.footer.segment .ui.stackable.inverted.divided.equal.height.stackable.grid .column {
+	    padding: 20px 0;
+    }
+
+    .ui.inverted.vertical.footer.segment .ui.stackable.inverted.divided.equal.height.stackable.grid .column h4 {
+	    margin: 0em 0em 1em;
+	    line-height: 1.5;
+    }
+
+    .ui.inverted.vertical.footer.segment .ui.stackable.inverted.divided.equal.height.stackable.grid .column p {
+	    line-height: 1.5;
+    }
+
+    .ui.card .image img {
+	    height: 300px;
+	    object-fit: cover;
+    }
+    .featured-artist {
+	animation: fade-in 1s ease-in-out;
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+	</style>
+</head>
+<body>
+	<div class="ui inverted menu">
+		<a class="active item" href="Home.html">Home</a>
+		<a class="item" href="Artists.html">Artists</a>
+		<a class="item" href="Albums.html">Albums</a>
+		<a class="item" href="Songs.html">Songs</a>
+		<div class="right menu">
+			<a class="item" href="Log in.html">Login</a>
+			<a class="item" href="Sign up.html">Sign Up</a>
+		</div>
+	</div>
+	
+	<div class="ui container">
+		<div class="ui stackable grid">
+			<div class="ten wide column">
+				<div class="ui segment">
+					<h1>Welcome to our Music Website!</h1>
+					<p>Discover new artists, albums, and songs.</p>
+				</div>
+			</div>
+			
+			<div class="six wide column">
+				<div class="ui segment">
+					<h3 class="featured-artist">Featured Artist</h3>
+					<img class="ui centered medium image" src="https://via.placeholder.com/300x300.png?text=Artist+Image">
+					<h4>Artist Name</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat.</p>
+					<a class="ui button" href="#">View Artist</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="ui container">
+		<div class="ui divider"></div>
+		<h2>Recent Releases</h2>
+		<div class="ui three stackable cards">
+			<div class="card">
+				<div class="image">
+					<img src="https://via.placeholder.com/300x300.png?text=Album+Image">
+				</div>
+				<div class="content">
+					<a class="header" href="#">Album Name</a>
+					<div class="meta">
+						<span class="date">Release Date</span>
+					</div>
+					<div class="description">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat.
+					</div>
+				</div>
+				<div class="extra content">
+					<a href="#">
+						<i class="user icon"></i>
+						Artist Name
+					</a>
+				</div>
+			</div>
+			
+			<div class="card">
+				<div class="image">
+					<img src="https://via.placeholder.com/300x300.png?text=Album+Image">
+				</div>
+				<div class="content">
+					<a class="header" href="#">Album Name</a>
+					<div class="meta">
+						<span class="date">Release Date</span>
+					</div>
+					<div class="description">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat.
+					</div>
+				</div>
+				<div class="extra content">
+					<a href="#">
+						<i class="user icon"></i>
+						Artist Name
+					</a>
+				</div>
+			</div>
+			
+			<div class="card">
+				<div class="image">
+					<img src="https://via.placeholder.com/300x300.png?text=Album+Image">
+				</div>
+				<div class="content">
+					<a class="header" href="#">Album Name</a>
+					<div class="meta">
+						<span class="date">Release Date</span>
+					</div>
+					<div class="description">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat.
+					</div>
+				</div>
+				<div class="extra content">
+					<a href="#">
+						<i class="user icon"></i>
+						Artist Name
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="ui inverted vertical footer segment">
+		<div class="ui container">
+			<div class="ui stackable inverted divided equal height stackable grid">
+				<div class="three wide column">
+					<h4 class="ui inverted header">About Us</h4>
+					<div class="ui inverted link list">
+						<a href="Contact us.html" class="item">Contact Us</a>
+						<a href="#" class="item">FAQ</a>
+						<a href="#" class="item">Terms and Conditions</a>
+						<a href="#" class="item">Privacy Policy</a>
+					</div>
+				</div>
+				<div class="three wide column">
+					<h4 class="ui inverted header">Connect with Us</h4>
+					<div class="ui inverted link list">
+						<a href="#" class="item">Facebook</a>
+						<a href="#" class="item">Twitter</a>
+						<a href="#" class="item">Instagram</a>
+					</div>
+				</div>
+				<div class="seven wide column">
+					<h4 class="ui inverted header">Footer Header</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

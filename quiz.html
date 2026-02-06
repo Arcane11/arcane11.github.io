@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Math Quiz for Kids</title>
+    <link rel="stylesheet" href="quiz.css">
+    <link rel="stylesheet" href="quiz.js">
+</head>
+
+<body>
+
+    <div class="landingPage">
+        <div class="container">
+            <div class="card">
+                <div class="firstHalf">
+                    <p>Welcome kids! Lets's work on these math questions.</p>
+                </div>
+                <div class="secondHalf">
+                    <button id="getStartedBtn">Let's go</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="operationsPage" style="display: none">
+        <div class="container">
+            <div class="card">
+                <div class="firstHalf">
+                    <p>Which operation would you like to work on?</p>
+                </div>
+                <div class="secondHalf">
+                    <div class="operationsCard">
+                        <div class="sign addition">
+                            <p>+</p>
+                        </div>
+                        <div class="sign subtraction">
+                            <p>-</p>
+                        </div>
+                        <div class="sign multiplication">
+                            <p>×</p>
+                        </div>
+                        <div class="sign division">
+                            <p>÷</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="invalidInputHolder">
+                    <label for="" id="invalidInputOne"></label>
+                </div>
+                <div class="foot">
+                    <button id="nextBtn" class="nextBtn1">→</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="difficultyPage" style="display: none">
+        <div class="container">
+            <div class="card">
+                <div class="firstHalf">
+                    <p>How much difficulty can you manage?</p>
+                </div>
+                <div class="secondHalf">
+                    <p>
+                        <span id="progBar"></span>
+                        <small>beginner</small>
+                    </p>
+                    <input type="range" value="0" id="max" min="135" max="315">
+                </div>
+                <div class="foot">
+                    <button id="nextBtn" class="nextBtn2">→</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="numOfQtnsPage" style="display: none;">
+        <div class="container">
+            <div class="card">
+                <div class="firstHalf">
+                    <p>How many questions would you like to have?</p>
+                    <input type="number" id="numOfQtnsInput">
+                </div>
+                <div class="invalidInputHolder">
+                    <label for="" id="invalidInputTwo"></label>
+                </div>
+                <div class="foot">
+                    <button id="nextBtn" class="nextBtn3">→</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="quizPage" style="display: none;">
+        <nav>
+            <ul>
+                <div class="navBarBtnHolder">
+                    <button class="navBarBtn" id="restartBtn" onclick="reload()">←</button>
+                    <label for="restartBtn" id="restartLabel" style="display: none;">restart</label>
+                </div>
+                <div class="navBarBtnHolder">
+                    <label for="advancedBtn" id="advancedLabel" style="display: none;">advanced</label>
+                </div>
+            </ul>
+        </nav>
+        <div class="quizBody">
+            <div class="container">
+                <div class="card">
+                    <div class="questionCard">
+                        <div class="heartHolder">
+                            <p class="heart" id="heartOne">♥</p>
+                            <p class="heart" id="heartTwo">♥</p>
+                            <p class="heart" id="heartThree">♥</p>
+                        </div>
+                        <div class="timerHolder">
+                            <label for="" id="timer">00 : 00</label>
+                        </div>
+                        <div class="questionHolder">
+                            <label for="" id="questionLabel">7+7</label>
+                        </div>
+                        <div class="answerHolder">
+                            <input type="number" id="answerInput">
+                        </div>
+                    </div>
+                    <div class="resultContainer">
+                        <div class="resultCard">
+                            <label for="" id="time"></label>
+                            <label for="" id="timeLabel"></label>
+                            <label for="" id="answer"></label>
+                            <label for="" id="recommendation"></label>
+                            <button id="restartBtnEnd">Take another one</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="advancedPage" style="display: none; ">
+        <div class="nav">            
+            <button class="navBarBtn" id="restartBtn">←</button>
+        </div>
+        <div class="container">
+            <div class="card">
+                <div id="firstHalf">
+                    <h1>WELCOME</h1>
+                    <p>This is the advanced quiz section. Where the questions are somehwat a bit harder and you're
+                        forced to work under a limited time unlike earlier. Good luck.</p>
+                    <div class="startBtnHolder">
+                        <button id="startBtn">Start</button>
+                    </div>
+                </div>
+                <div id="secondHalf" style="display: none;">
+                    <div class="advancedQuestionCard">
+                        <div class="countDownHolder">
+                            <label for="" id="countDown">01 : 00</label>
+                        </div>
+                        <div class="advancedQuestionHolder">
+                            <label for="" id="advancedQuestion">87 * 96</label>
+                        </div>
+                        <div class="advancedAnswerHolder">
+                            <input type="number" name="" id="advancedAnswerInput">
+                        </div>
+                    </div>
+                </div>
+                <div id="thirdHalf" style="display: none;">
+                        <div class="resultBoxHolder">
+                            <div class="resultBox">
+                                <label for="" id="result">good job.. wanna continue?</label>
+                                <button id="continueBtn" class="resultBtn">Continue</button>
+                                <button id="cancelBtn" class="resultBtn">Cancel</button>
+                            </div>
+                        </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="./quiz.js">
+
+    </script>
+
+</body>
+
+</html>

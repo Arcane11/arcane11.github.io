@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./zfontawesome-free-6.3.0-web/css/all.css">
+    <link rel="stylesheet" href="./quiz.css">
+</head>
+<body >
+    <div id="showed"  class="container">
+        <div class="guide" id="guide">
+            <h1 class="header">Math Quiz</h1>
+            <div class="fields-and-buttons" id="cont">
+                <div class= "input-container">
+                    <input type="text" autofocus placeholder="Enter your name" class="input" id="name" required>
+                    <input type="number" class="input" placeholder="Number of questions" id="amount" required>
+                    <p id="error" class="error"></p>
+                </div>
+            </div>
+            <p class="choose">Choose from:</p>
+            <div class="operations-container">
+                <label for="addition" class="operation-label"><div class="operation"><input data-operation type="radio" name="operation" required value="+" id="addition" class="click"><p><i class="fa-solid fa-plus fa-2x"></i></p></div></label>
+                <label for="subtraction" class="operation-label"><div class="operation"><input data-operation type="radio" name="operation"  required value="-" id="subtraction"><p><i class="fa-solid fa-minus fa-2x"></i></p></div></label>
+                <label for="multiplication" class="operation-label"><div class="operation"><input data-operation type="radio" name="operation"  required value="*" id="multiplication"><p><i class="fa-solid fa-xmark fa-2x"></i></p></div></label>
+                <label for="division" class="operation-label"><div class="operation"><input data-operation type="radio" name="operation"  required value="/" id="division"><p><i class="fa-solid fa-divide fa-2x"></i></p></div></label>
+            </div>
+        </div>
+        <div class="rules-container" id="rules">
+            <div class="rules">
+                <h1 class="dear">Rules</h1>
+                <ol>
+                    <li> <p class="rule" id="rule1">You cannot exit once you start the quiz.</p></li>
+                    <li><p class="rule" id="rule2">You will be given a time of 20 seconds for each question.</p></li>
+                    <li> <p class="rule" id="rule2">The questions will be given in a choose form.</p></li>
+                    <li> <p class="rule" id="rule2">You have two attempts for each question.</p></li>
+                    <li> <p class="rule" id="rule2">After answering, You will have 3 seconds befor proceeding.</p></li>
+                </ol>
+            </div>
+        </div>
+        <div class="start-btn-container">
+            <button class="start-btn" id="btn">Submit</button>
+        </div>
+        <div class="question-container" id="div">
+            <div class="questions">
+                <div class="score-and-progressbar">
+                    <div class="progress-div">
+                        <p id ="progress-text" class="progress-p"></p>
+                        <div>
+                            <p class="score-counter">Score:<strong id="score">0</strong></p>
+                        </div>
+                    </div>
+                    <div id="progressBar" class="progress-bar">
+                        <div id ="progress-bar-full"></div>
+                    </div>
+                </div>
+                <div>
+                    <p class="question-div">
+                        <strong id="noone" class= "question-elements">1</strong>
+                        <strong id="operation"class= "question-elements" >+</strong>
+                        <strong id="notwo" class= "question-elements">2</strong>
+                        <strong id="answer" class= "question-elements">= ?</strong>
+                    </p>
+                </div>
+                <div class="choice-div">
+                    <button id="one" class="choices"></button>
+                    <button id="two" class="choices"></button>
+                    <button id="three" class="choices"></button>
+                    <button id="four" class="choices"></button>
+                </div>
+                <div class="timer-div">
+                    <p class="clock"><i class="fa-solid fa-stopwatch fa-beat fa-2x"></i></p>
+                    <p id="timer"></p>
+                </div>
+                <div class="conta">
+                    <p id="p"></p>
+                </div>
+            </div>
+        </div>
+        <div class="result" id="result">
+            <h1 class="congrats" id="congratsHeader"></h1>
+            <hr>
+            <div class="img" id="img"></div>
+            <p id='que' class="rank"></p>
+            <div class="info">
+                <p id="scoren"></p>
+                <p class="percent" id="percent"></p>
+                <p id="timeTaken"></p>
+            </div>
+            <div class="restart-btn-container">
+                <a href="./easy1.html" ><button class="restart-btn" id="btnrep">Restart</button></a>
+            </div>
+        </div>
+    </div>
+    <script src="./quiz4.js"></script>
+</body>
+</html>

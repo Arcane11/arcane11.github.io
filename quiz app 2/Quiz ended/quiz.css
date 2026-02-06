@@ -1,0 +1,313 @@
+
+body {
+    font-family: 'Trebuchet MS';
+    background-color: rgb(181, 182, 186);
+    overflow-x: hidden;
+}
+.container {
+    width: 100%;
+    max-width: 650px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(239, 239, 239);
+    box-shadow: 0px 5px 10px 0px grey;
+    margin-top: 70px;
+}
+.guide {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+.input {
+    font-family: 'Trebuchet MS';
+    width: 200px;
+    outline: rgb(3, 3, 60);
+    margin-bottom: 10px;
+    width: 250px;
+    height: 40px;
+}
+.error {
+    color: red;
+}
+.operations-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 25px;
+}
+.header {
+    text-align: center;
+    font-size: 50px;
+    color: rgb(0, 37, 65);
+    font-weight: bold;
+}
+.operation {
+    width: 100px;
+    height: 70px;
+    transition: 0.2;
+    border: none;
+    color: white;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+}
+.operation-label {
+    width: 100px;
+    height: 70px;
+    display: flex;
+    padding-left: auto;
+    padding-right: auto;
+    background-color: rgb(0, 22, 102);
+    margin-right: 20px;
+}
+.choose {
+    text-align: center;
+    font-size: 15px;
+    color: rgb(0, 37, 65);
+}
+.click {
+    background-color: green;
+}
+input[type = "radio"] {
+    display: none;
+}
+.operation-btn {
+    width: 100%;
+    height: 100%;
+}
+.start-btn {
+    width: 200px;
+    background-color: rgb(0, 22, 102);
+    height: 50px;
+    transition: 0.2;
+    border: none;
+    color: white;
+    font-weight: 600;
+    margin-top: 80px;
+    font-size: 20px;
+    font-family: 'Trebuchet MS';
+}
+.start-btn:hover {
+    background-color: green;
+}
+.restart-btn {
+    width: 200px;
+    background-color: rgb(0, 22, 102);
+    height: 50px;
+    transition: 0.2;
+    border: none;
+    color: white;
+    font-weight: 600;
+    margin-top: 40px;
+    font-size: 20px;
+    font-family: 'Trebuchet MS';
+}
+.restart-btn:hover {
+    background-color: green;
+}
+
+.start-btn-container {
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    padding-left: 35%;
+}
+.restart-btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.result {
+    display: none;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+    width: 400px;
+    height: 200px;
+    border: 2px solid rgb(8, 18, 45);
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+}
+.question-div {
+    width: 450px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid rgb(3, 19, 51);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+.question-elements {
+    text-align: center;
+    font-size: 90px;
+    font-weight: 400;
+}
+.choice-div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    font-weight: lighter;
+}
+.choices {
+    margin-top: 20px;
+    background-color: rgb(0, 22, 102);
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    transition: 0.2s;
+    color: white;
+    border: 1px solid white;
+    margin-right: 15px;
+    font-size: 40px;
+    cursor: pointer;
+}
+.choices:hover {
+    background-color: white;
+    color: rgb(0, 22, 102);
+    border: 1px solid rgb(0, 22, 102);
+}
+.questions {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 20px;
+    padding-bottom: 20px;
+}
+.score-and-progressbar {
+    margin-bottom: 60px;
+}
+.progress-p {
+    margin-left: 30px;
+    margin-right: 70%;
+    color: rgb(0, 37, 65);
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: -5;
+}
+.score-counter{
+    margin-right: 20px;
+    font-weight: bold;
+    font-size: 25px;
+    color: rgb(0, 37, 65);
+}
+.progress-div {
+    display: flex;
+    width: 650px;
+    margin-top: 20px;
+}
+#progressBar{
+    width: 180px;
+    height: 15px;
+    border: 2px solid rgb(0, 22, 102);
+    border-radius: 5px;
+    margin-left: 30px;
+}
+#progress-bar-full {
+    background-color: rgb(0, 22, 102);
+    width: 0%;
+    height: 100%;
+}
+.timer-div {
+    display: flex;
+    color: rgb(0, 22, 102);
+    width: 100px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 80%;
+    background-color: azure;
+    margin-right: 100px;
+    margin-top: 40px;
+    margin-bottom: -5px;
+}
+.clock {
+    margin-right: 5px;
+}
+.rules {
+    display: none;
+}
+.question-container {
+    display: none;
+}
+.congrats {
+    text-align: center;
+    color: rgb(0, 37, 65);
+    font-weight: bold;
+    font-size: 20px;
+    padding-top: 20px;
+}
+.conta {
+    color: red;
+    margin-left: 20px;
+    padding-bottom: 20px;
+}
+hr {
+    margin-left: 50px;
+    margin-right: 50px;
+    color: gray;
+}
+.img {
+    width: 100%;
+    text-align: center;
+    color: rgb(0, 37, 65);
+    margin-top: -10px;
+}
+.rank {
+    text-align: center;
+    font-size: 30px;
+    color: rgb(0, 37, 65);
+    margin-top: -30px;
+}
+.rules-container {
+   display: none;
+}
+.rules {
+    color: rgb(0, 37, 65);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 50px;
+}
+.dear {
+    text-align: center;
+}
+.n {
+    height: 100%;
+    width: 100%;
+    padding-bottom: 70px;
+}
+.attempt-box {
+    display: flex;
+    width: 200px;
+}
+.attempt {
+    border: 1px solid rgb(0, 37, 65) ;
+    border-radius: 50%;
+    background-color: rgb(0, 37, 65);
+}
